@@ -21,8 +21,7 @@ To improve our data structure, we will be using a STAR schema. This schema consi
 - **Fact Table:** songplays: attributes referencing to the dimension tables
 - **Dimension Tables:** users, songs, artists and time table
 
-# ETL Process
-For this project, we use SQL for the ETL and python as a bridge. The transformation and data normalization is done by Query, see the sql_queries.py for more details.
+
 
 # How to run process
 1. Start up a AWS Redshift Cluster
@@ -37,14 +36,11 @@ For this project, we use SQL for the ETL and python as a bridge. The transformat
 4. Run 'python etl.py'
 - This will run the ETL process
 
-# Project Structure
-- create_tables.py - Script will drop old tables (if exist) ad re-create new tables
-- etl.py - Script will executes the queries that extract JSON data from the S3 bucket and ingest them to Redshift
-- sql_queries.py - File that contains variables with SQL statement in String formats, partitioned by CREATE, DROP, COPY and INSERT statements
-- dhw.cfg - Configuration file used that contains info about Redshift, IAM and S3
 
 # ETL.py
 
+### ETL Process
+For this project, we use SQL for the ETL and python as a bridge. The transformation and data normalization is done by Query, see the sql_queries.py for more details.
 etl.py is where you'll load data from S3 into staging tables on Redshift and then process that data into your analytics tables on Redshift.
 
 ETLPipeline:
@@ -55,7 +51,11 @@ ETLPipeline:
 4- Delete your redshift cluster when finished.
 
 
- 
+ # Project Structure
+- create_tables.py - Script will drop old tables (if exist) ad re-create new tables
+- etl.py - Script will executes the queries that extract JSON data from the S3 bucket and ingest them to Redshift
+- sql_queries.py - File that contains variables with SQL statement in String formats, partitioned by CREATE, DROP, COPY and INSERT statements
+- dhw.cfg - Configuration file used that contains info about Redshift, IAM and S3
 
 
  
