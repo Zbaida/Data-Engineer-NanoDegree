@@ -28,16 +28,6 @@ Just like in previous projects for this course, we will be creating a star schem
 - **Fact Table:** songplays: attributes referencing to the dimension tables
 - **Dimension Tables:** users, songs, artists and time table
 
-## How to run ETL process
-Here is how to run this project on the Udacity local mode:
-1. Update 'dl.cfg' file with your AWS credentials
-> AWS_ACCESS_KEY_ID     = YOUR_AWS_ACCESS_KEY_ID
-> AWS_SECRET_ACCESS_KEY = YOUR_AWS_SECRET_ACCESS_KEY
-> INPUT_DATA            = s3://<YOUR_BUCKET_NAME>/
-> OUTPUT_DATA           = s3://<YOUR_BUCKET_NAME>/output_data/
-> INPUT_DATA_SD         = s3://<YOUR_BUCKET_NAME>/song_data/*/*/*/*.json
-> INPUT_DATA_LD         = s3://<YOUR_BUCKET_NAME>/log_data/*/*/*.json
-
 
 
     
